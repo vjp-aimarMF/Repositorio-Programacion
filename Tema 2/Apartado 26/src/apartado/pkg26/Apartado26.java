@@ -19,7 +19,6 @@ public class Apartado26 {
         System.out.println("Por favor, introduzca un número de 4 cifras: ");
         int numero = entrada.nextInt();
         
-        
         int primera = numero / 1000;
         int segunda = (numero / 100) % 10;
         int tercera = (numero / 10) % 10;
