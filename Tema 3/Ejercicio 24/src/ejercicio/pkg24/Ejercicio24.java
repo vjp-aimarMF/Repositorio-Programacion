@@ -14,14 +14,34 @@ public class Ejercicio24 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int numero = 0;
+       Scanner entrada = new Scanner(System.in);
+       int numero;
+       
+       //Pedir un número mayor que 0
+       
+       do{
+           System.out.println("Introduce un número mayor que 0: ");
+           numero = entrada.nextInt();
+           
+           if (numero <= 0) {
+               System.out.println("Error: el número debe ser mayor que 0.");
+           }
+       }while (numero <= 0);
+       
+       int contador = 0;
+       
+        System.out.println("Múltiplos de 3  entre 1 y " + numero + ":");
         
-        //Validación: asegurarse de que el número sea mayor que 0
-        do{
-            System.out.println("Introduce un número mayor que 0: ");
-        if ()
-        }
+       //Mostrar múltiplos de 3
+       for (int i = 1; i <= numero; i++) {
+           if (i % 3 == 0) {
+               System.out.println(i + " ");
+               contador++;
+           }
+       }
+       
+       //Mostrar total
+        System.out.println("Total de múltiplos de 3 encontrados: " + contador);
     }
     
 }
