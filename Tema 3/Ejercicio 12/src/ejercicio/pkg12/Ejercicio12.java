@@ -19,7 +19,7 @@ public class Ejercicio12 {
         do {
             System.out.println(numero);
             numero += 2; //Avanzamos de dos en dos para mantener solo pares
-        } while (numero <= 132); //132 es ek último número par antes de 133
+        } while (numero <= 132); //132 es el último número par antes de 133
     }
     
 }
