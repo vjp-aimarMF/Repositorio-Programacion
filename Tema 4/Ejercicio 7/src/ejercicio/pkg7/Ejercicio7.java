@@ -19,19 +19,19 @@ public class Ejercicio7 {
         
         //Pedir los 4 números al usuario
         System.out.println("Por favor, introduzca el primer número: ");
-        int num1 = entrada.nextInt();
+        int a = entrada.nextInt();
         
         System.out.println("Ahora, introduzca el segundo número: ");
-        int num2 = entrada.nextInt();
+        int b = entrada.nextInt();
         
         System.out.println("Introduzca el tercer número: ");
-        int num3 = entrada.nextInt();
+        int c = entrada.nextInt();
         
         System.out.println("Por último, introduzca el cuarto número: ");
-        int num4 = entrada.nextInt();
+        int d = entrada.nextInt();
         
         //Llamar al método
-        ejercicio7Tema4(num1, num2, num3, num4);
+        ejercicio7Tema4(a, b, c, d);
     }
     
 }
