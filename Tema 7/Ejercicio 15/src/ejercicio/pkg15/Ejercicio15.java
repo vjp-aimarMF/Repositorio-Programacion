@@ -18,7 +18,12 @@ public class Ejercicio15 {
     public static void main(String[] args) {
        Scanner entrada = new Scanner (System.in);
        int opcion;
-       
+       int[] ventas = new int[12];
+        String[] meses = {
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    };
+
        do{
            mostrarMenu();
            System.out.println("Seleccione una opcion: ");
@@ -26,27 +31,27 @@ public class Ejercicio15 {
            
            switch(opcion) {
                case 1:  
-                   rellenarVentas();
+                   rellenarVentas(ventas);
                    break;
                
                case 2:
-                   mostrarVentas();
+                   mostrarVentas(ventas, meses);
                    break;
                
                case 3:
-                   mostrarVentasReves();
+                   mostrarVentasReves(ventas, meses);
                    break;
                    
                case 4:
-                   sumaTotal();
+                   sumaTotal(ventas);
                    break;
                    
                case 5:
-                   mostrarMesesPares();
+                   mostrarMesesPares(ventas, meses);
                    break;
                    
                case 6:
-                   mostrarMesMayorVenta();
+                   mostrarMesMayorVenta(ventas, meses);
                    break;
                    
                case 7:
@@ -58,7 +63,7 @@ public class Ejercicio15 {
            }
            
            System.out.println();
-       } while(opcion != 7);
+       } while(opcion != 7);       
     }
     
     //Mostranos el menu
@@ -72,15 +77,9 @@ public class Ejercicio15 {
         System.out.println("6. Mostrar el mes con mas ventas");
         System.out.println("7. Salir");
     }
-    
-    static int[] ventas = new int[12];
-    static String[] meses = {
-    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    };
-    
+     
     //Rellenamos con numeros aleatorios (10-100)
-    public static void rellenarVentas() {
+    public static void rellenarVentas(int[] ventas) {
         for(int i=0; i < ventas.length; i++) {
             ventas[i] = (int)(Math.random() * 91) + 10; //entre 10 y 100
         }
@@ -88,7 +87,7 @@ public class Ejercicio15 {
     }
     
     //Mostramos ventas
-    public static void mostrarVentas() {
+    public static void mostrarVentas(int[] ventas, String[] meses) {
         System.out.println("Ventas mensuales: ");
         
         for(int i = 0; i < ventas.length; i++) {
@@ -97,7 +96,7 @@ public class Ejercicio15 {
     }
     
     //Mostramos al reves
-    public static void mostrarVentasReves() {
+    public static void mostrarVentasReves(int[] ventas, String[] meses) {
         System.out.println("Ventas mensuales al reves: ");
         
         for (int i = ventas.length - 1; i >= 0; i--) {
@@ -106,7 +105,7 @@ public class Ejercicio15 {
     }
     
     //Suma total del año
-    public static void sumaTotal() {
+    public static void sumaTotal(int[] ventas) {
         int suma = 0;
         for (int venta : ventas) {
             suma += venta;
@@ -115,7 +114,7 @@ public class Ejercicio15 {
     }
     
     //Suma de meses pares (1, 3, 5, ...)
-    public static void mostrarMesesPares() {
+    public static void mostrarMesesPares(int[] ventas, String[] meses) {
         int suma = 0;
         System.out.println("Ventas de meses pares: ");
         
@@ -127,7 +126,7 @@ public class Ejercicio15 {
     }
     
     //Mes con mas ventas
-    public static void mostrarMesMayorVenta() {
+    public static void mostrarMesMayorVenta(int[] ventas, String[] meses) {
         int max = ventas[0];
         int indiceMax = 0;
         
