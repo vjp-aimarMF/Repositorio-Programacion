@@ -1,0 +1,6 @@
+Nombre y Apellido del becario: Aimar Moreno
+Sexo: h
+Edad: 20
+Numero de suspensos: 0
+Residiencia Familiar: si
+Ingresos Anuales: 180000
